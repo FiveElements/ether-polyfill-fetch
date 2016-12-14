@@ -1,0 +1,22 @@
+{
+  "name": "ether-polyfill-fetch",
+  "version": "0.0.1",
+  "description": "Polymer Polyfill Fetch api",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FiveElements/ether-polyfill-fetch.git"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "polymer lint  --no-follow-dependencies  --include-dependencies bower_components/*  --input *.html",
+    "dev": "polymer serve -p 8080 | npm run watch",
+    "test": "polymer test",
+    "dev-install": "npm install -g bower polymer-cli browser-sync",
+    "watch": "browser-sync start --proxy localhost:8080 --startPath /components/ether-polyfill-fetch/demo/ --files *.html,*.js,demo/*"
+  },
+  "author": "FiveElements",
+  "license": "ISC"
+}
