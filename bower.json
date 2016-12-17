@@ -4,7 +4,8 @@
   "main": "ether-polyfill-fetch.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "fetch": "^2.0.1"
+    "fetch": "^2.0.1",
+    "es6-promise": "jakearchibald/es6-promise#^4.0.5"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
