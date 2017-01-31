@@ -1,0 +1,58 @@
+<link rel="import" href="../../polymer/polymer.html">
+
+
+<!--
+`demo-fetch`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="demo-fetch">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+
+        </style>
+
+       <div on-tap="_handleClickValidate">
+           is click =  [[valid]]
+       </div>
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'demo-fetch',
+
+            properties: {
+                data: {
+                    type: Object
+                },
+                valid: {
+                    type: Boolean
+                },
+            },
+
+            _handleClickValidate: function (e) {
+                this.validate().then(function (val) {
+                    this.valid=val;
+                }.bind(this));
+            },
+
+            validate: function (dataChange) {
+                return new Promise(function (resolve, reject) {
+                   var result = true;
+                   resolve(result);
+                });
+            },
+            toggleData: function () {
+//                this.dataOpened= !this.dataOpened;
+                this.$.collapseData.toggle();
+            }
+
+        });
+    </script>
+</dom-module>
